@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:background="@drawable/textura_madera1"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:background="#60000000"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/blanco"
+            android:text="Restaurant-Bar Mexicano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:background="@color/negro"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/blanco"
+                    android:text="Bienvenido , seleccione una opcion."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/layout_ordenar"
+                    android:background="@layout/shape"
+                    android:layout_marginVertical="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imagen_ordenar"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="15dp"
+                        android:src="@drawable/restaurant_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:onClick="abrirOrdenar"
+                        android:id="@+id/boton_ordenar"
+                        android:textSize="20sp"
+                        android:gravity="center_vertical"
+                        android:background="@color/negro"
+                        android:textColor="@color/blanco"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_height="60dp"
+                        android:layout_width="match_parent"
+                        android:text="Ordenar" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_cuenta"
+                    android:background="@layout/shape"
+                    android:layout_marginVertical="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imagen_cuenta"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="15dp"
+                        android:src="@drawable/cuenta2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:gravity="center_vertical"
+                        android:id="@+id/boton_cuenta"
+                        android:textSize="20sp"
+                        android:background="@color/negro"
+                        android:textColor="@color/blanco"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_height="60dp"
+                        android:layout_width="match_parent"
+                        android:text="Pedir Cuenta" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_mesero"
+                    android:background="@layout/shape"
+                    android:layout_marginVertical="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imagen_mesero"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="15dp"
+                        android:src="@drawable/mesero2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/boton_mesero"
+                        android:textSize="20sp"
+                        android:gravity="center_vertical"
+                        android:background="@color/negro"
+                        android:textColor="@color/blanco"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_height="60dp"
+                        android:layout_width="match_parent"
+                        android:text="Llamar mesero" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
