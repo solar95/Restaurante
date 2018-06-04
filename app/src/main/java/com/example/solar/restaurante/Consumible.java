@@ -13,6 +13,12 @@ public class Consumible {
         this.imageID = imageID;
     }
 
+    public Consumible(String nombre , int precio){
+
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
     public String getNombre() {
         return nombre;
     }

@@ -27,14 +27,28 @@
     </LinearLayout>
 
     <LinearLayout
+
+        android:background="@color/negro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="500dp">
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/lv01"></ListView>
+            android:id="@+id/lv01"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp"
+            ></ListView>
 
     </LinearLayout>
+
+    <Button
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/blanco"
+        android:background="@color/verde"
+        android:text="Ordenar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
