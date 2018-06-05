@@ -1,21 +1,25 @@
 package com.example.solar.restaurante;
 
+import android.app.Application;
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
-
-    String nombre;
-    ArrayList<Consumible> pedidos = new ArrayList<Consumible>();
+public class Cliente{
 
 
-    public Cliente(){}
+    private static ArrayList<Consumible> sOrdenes;
 
-    public Cliente(ArrayList<Consumible> pedidos){
-        this.pedidos = pedidos;
+    public static ArrayList<Consumible> getInstance(Context context){
+
+        if (sOrdenes == null){
+            sOrdenes = new ArrayList<Consumible>();
+        }
+
+        return sOrdenes;
+
     }
-
-
 
 
 }

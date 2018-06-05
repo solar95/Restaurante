@@ -24,69 +24,96 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <View
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:background="@color/blanco"
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="25sp"
-            android:textColor="@color/blanco"
-            android:text=". . . . . C U E N T A . . . . . "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <View
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/blanco"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
-
-        <TextView
-            android:id="@+id/cuenta_lista"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="20sp"
-            android:textColor="@color/blanco"
-            android:text="1 x Cerveza"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/cuenta_total"
-            android:text="TOTAL: "
-            android:textSize="20sp"
-            android:textColor="@color/blanco"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="25sp"
+                android:textColor="@color/blanco"
+                android:text=". . . . . C U E N T A . . . . . "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
-        <TextView
-            android:text="Muchas gracias por su visita , vuelva pronto!"
-            android:textSize="18sp"
-            android:textColor="@color/blanco"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cuenta_lista_articulos"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/blanco"
+                    android:text="1 x Cerveza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/cuenta_lista_precios"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/blanco"
+                    android:text="1 x Cerveza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cuenta_total"
+                android:text="TOTAL: "
+                android:textSize="20sp"
+                android:textColor="@color/blanco"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
-        <View
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:background="@color/blanco"
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            <TextView
+                android:text="Muchas gracias por su visita , vuelva pronto!"
+                android:textSize="18sp"
+                android:textColor="@color/blanco"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
-    </LinearLayout>
+            <View
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/blanco"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 
 </LinearLayout>

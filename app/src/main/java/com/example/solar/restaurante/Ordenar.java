@@ -1,11 +1,15 @@
 package com.example.solar.restaurante;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,6 +19,7 @@ public class Ordenar extends AppCompatActivity implements  AdapterView.OnItemCli
     private ListView lv1;
     private ConsumibleAdapter adapter;
     private TextView nombre, precio, cantidad;
+    private Button btnCuenta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +29,21 @@ public class Ordenar extends AppCompatActivity implements  AdapterView.OnItemCli
         //ListView Code
         list1 = new ArrayList<Consumible>();
         llenarLista();
+        btnCuenta = findViewById(R.id.btn_ordenar);
         nombre = findViewById(R.id.item_nombre);
         precio = findViewById(R.id.item_precio);
         adapter = new ConsumibleAdapter(this, list1);
         lv1 = findViewById(R.id.lv01);
         lv1.setAdapter(adapter);
         lv1.setOnItemClickListener(this);
+        btnCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cuenta = new Intent(getApplicationContext(),Cuenta.class);
+                startActivity(cuenta);
+
+            }
+        });
     }
 
 
@@ -58,4 +72,14 @@ public class Ordenar extends AppCompatActivity implements  AdapterView.OnItemCli
         nombre.setText(list1.get(i).getNombre());
         precio.setText(list1.get(i).getPrecio());
     }
+
+
+    public void pedirCuenta(View view) {
+        Intent cuenta = new Intent(this,Cuenta.class);
+        startActivity(cuenta);
+        Toast.makeText(this,"Abriendo...",Toast.LENGTH_SHORT).show();
+    }
+
+
+
 }

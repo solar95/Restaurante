@@ -1,11 +1,13 @@
 package com.example.solar.restaurante;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,7 +22,8 @@ import java.util.ListIterator;
 public class ConsumibleAdapter extends ArrayAdapter<Consumible> {
     private Context context;
     private ArrayList<Consumible> data;
-    ArrayList<Consumible> al = new ArrayList<Consumible>();
+
+
 
 
     public ConsumibleAdapter(Context context, ArrayList<Consumible> data) {
@@ -32,7 +35,6 @@ public class ConsumibleAdapter extends ArrayAdapter<Consumible> {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        Cliente cliente = new Cliente();
 
         final View item = LayoutInflater.from(context).inflate(R.layout.item, null);
 
@@ -75,7 +77,7 @@ public class ConsumibleAdapter extends ArrayAdapter<Consumible> {
                 String p = precio.getText().toString();
                 int pn = Integer.parseInt(p);
                 Consumible consumible = new Consumible(n,pn);
-                al.add(consumible);
+                Cliente.getInstance(getContext()).add(consumible);
 
 
             }
@@ -91,7 +93,19 @@ public class ConsumibleAdapter extends ArrayAdapter<Consumible> {
                 String p = precio.getText().toString();
                 int pn = Integer.parseInt(p);
                 Consumible consumible = new Consumible(n,pn);
-                al.remove(consumible);
+
+                //Cliente.getInstance(getContext()).remove(Cliente.getInstance(getContext()).size()-1);
+
+
+
+                    int j;
+
+                    for (j = 0; j < Cliente.getInstance(getContext()).size();j++){
+                        if (Cliente.getInstance(getContext()).get(j).getNombre().equals(consumible.getNombre()));
+                        Toast.makeText(getContext(),"Si aplica",Toast.LENGTH_SHORT).show();
+                        Cliente.getInstance(getContext()).remove(j);
+                        break;
+                    }
 
             }
         });

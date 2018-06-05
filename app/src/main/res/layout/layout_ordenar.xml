@@ -26,29 +26,40 @@
 
     </LinearLayout>
 
-    <LinearLayout
-
-        android:background="@color/negro"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="match_parent">
 
-        <ListView
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/negro"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/lv01"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="10.0sp"
-            ></ListView>
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+            <ListView
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:id="@+id/lv01"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10.0sp"
+                ></ListView>
 
-    <Button
-        android:layout_marginVertical="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:textColor="@color/blanco"
-        android:background="@color/verde"
-        android:text="Ordenar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <Button
+                android:onClick="pedirCuenta"
+                android:id="@+id/btn_ordenar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/verde"
+                android:text="Ordenar"
+                android:textColor="@color/blanco" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 </LinearLayout>

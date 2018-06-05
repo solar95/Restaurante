@@ -55,6 +55,7 @@
                     android:layout_height="wrap_content" />
 
                 <LinearLayout
+                    android:onClick="abrirOrdenar"
                     android:id="@+id/layout_ordenar"
                     android:background="@layout/shape"
                     android:layout_marginVertical="20dp"
@@ -63,6 +64,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:onClick="abrirOrdenar"
                         android:id="@+id/imagen_ordenar"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="15dp"
@@ -87,6 +89,7 @@
 
 
                 <LinearLayout
+                    android:onClick="abrirCuenta"
                     android:id="@+id/layout_cuenta"
                     android:background="@layout/shape"
                     android:layout_marginVertical="20dp"
@@ -95,6 +98,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:onClick="abrirCuenta"
                         android:id="@+id/imagen_cuenta"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="15dp"
@@ -103,6 +107,7 @@
                         android:layout_height="wrap_content" />
 
                     <Button
+                        android:onClick="abrirCuenta"
                         android:gravity="center_vertical"
                         android:id="@+id/boton_cuenta"
                         android:textSize="20sp"
@@ -117,6 +122,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="llamarMesero"
                     android:id="@+id/layout_mesero"
                     android:background="@layout/shape"
                     android:layout_marginVertical="20dp"
@@ -125,6 +131,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:onClick="llamarMesero"
                         android:id="@+id/imagen_mesero"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="15dp"
@@ -133,6 +140,7 @@
                         android:layout_height="wrap_content" />
 
                     <Button
+                        android:onClick="llamarMesero"
                         android:id="@+id/boton_mesero"
                         android:textSize="20sp"
                         android:gravity="center_vertical"

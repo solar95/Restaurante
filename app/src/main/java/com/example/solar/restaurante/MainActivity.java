@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,5 +26,15 @@ public class MainActivity extends AppCompatActivity {
     public void abrirOrdenar(View view) {
         Intent ordenarIntent = new Intent(this,Ordenar.class);
         startActivity(ordenarIntent);
+    }
+
+    public void abrirCuenta(View view){
+        Intent cuentaIntent = new Intent(this,Cuenta.class);
+        startActivity(cuentaIntent);
+
+    }
+
+    public void llamarMesero(View view){
+        Toast.makeText(this,"Mesero en camino...",Toast.LENGTH_SHORT).show();
     }
 }
